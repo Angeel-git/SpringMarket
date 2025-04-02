@@ -26,6 +26,15 @@ public class Producto {
 
     private Boolean estado;
 
+    //Relacion(no vamos ni borrar, ni actualizar ni insertar una nueva categoria)
+    @ManyToOne
+    @JoinColumn(name = "id_categoria", insertable = false, updatable = false)
+    private Categoria categoria;
+
+
+
+    //---------------------------------------------------------------
+
     public Integer getIdProducto() {
         return idProducto;
     }

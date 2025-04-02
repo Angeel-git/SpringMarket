@@ -1,9 +1,11 @@
 package com.platzi.market.persitence.entity;
 
+import ch.qos.logback.core.net.server.Client;
 import jakarta.persistence.*;
 
 import java.time.DateTimeException;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 @Table(name = "compras")
@@ -23,6 +25,16 @@ public class Compra {
 
     private String comentario;
     private String estado;
+
+    //Relacion(no vamos ni borrar, ni actualizar ni insertar una nueva categoria)
+    @ManyToOne
+    @JoinColumn(name = "id_cliente", insertable = false, updatable = false)
+    private Cliente cliente;
+
+    @OneToMany(mappedBy = "producto")
+    private List<ComprasProducto> productos;
+
+    //--------------------------------
 
 
     public Integer getIdCompra() {
