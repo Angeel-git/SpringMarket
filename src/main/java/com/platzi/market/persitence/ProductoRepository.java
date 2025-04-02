@@ -5,6 +5,7 @@ import com.platzi.market.domain.repository.ProductRepository;
 import com.platzi.market.persitence.crud.ProductoCrudRepository;
 import com.platzi.market.persitence.entity.Producto;
 import com.platzi.market.persitence.mapper.ProductMapper;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -12,7 +13,11 @@ import java.util.Optional;
 
 @Repository //Indicamops que es una clase que trabaja ocn la bd directamente
 public class ProductoRepository implements ProductRepository {
+    @Autowired  //Le damos a Spring la capacidad para que pueda crear un objeto de este tipo
     private ProductoCrudRepository productoCrudRepository;
+
+
+    @Autowired
     private ProductMapper mapper;
 
     @Override
