@@ -17,7 +17,7 @@ public interface CategoryMapper {
 
     //Indicamos que le conversion es justo la contraria a la de arriba no hace falta volver a poner td los de Mappings
     @InheritInverseConfiguration
-    //Como en category no tenemos el atributo productos(qeu si tenemos en Categoria) no la vamos a mapear, tenemos que decirle que lo ignore)
+    //Como en category no tenemos el atributo productos(que si tenemos en Categoria) no la vamos a mapear, tenemos que decirle que lo ignore)
     @Mapping(target = "productos", ignore = true)
     Categoria toCategoria(Category category);
 

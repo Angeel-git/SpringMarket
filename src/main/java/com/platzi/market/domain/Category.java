@@ -2,8 +2,8 @@ package com.platzi.market.domain;
 
 public class Category {
     private int categoryId;
-    private String categoria;
-    private boolean activ;
+    private String category;
+    private boolean active;
 
     public int getCategoryId() {
         return categoryId;
@@ -13,19 +13,19 @@ public class Category {
         this.categoryId = categoryId;
     }
 
-    public String getCategoria() {
-        return categoria;
+    public String getCategory() {
+        return category;
     }
 
-    public void setCategoria(String categoria) {
-        this.categoria = categoria;
+    public void setCategory(String category) {
+        this.category = category;
     }
 
-    public boolean isActiv() {
-        return activ;
+    public boolean isActive() {
+        return active;
     }
 
-    public void setActiv(boolean activ) {
-        this.activ = activ;
+    public void setActive(boolean active) {
+        this.active = active;
     }
 }

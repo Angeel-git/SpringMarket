@@ -17,10 +17,19 @@ public class Categoria {
     private Boolean estado;
 
     //RELACIONES
-
     @OneToMany(mappedBy = "categoria")
-    @JoinColumn
     private List<Producto> productos;
+
+
+
+
+    public List<Producto> getProductos() {
+        return productos;
+    }
+
+    public void setProductos(List<Producto> productos) {
+        this.productos = productos;
+    }
 
     public Integer getIdCategoria() {
         return idCategoria;

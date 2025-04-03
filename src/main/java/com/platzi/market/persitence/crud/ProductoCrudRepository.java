@@ -18,5 +18,5 @@ public interface ProductoCrudRepository extends CrudRepository<Producto, Integer
     //Recuperar la lista de los productos que esten en stock y se esten vendiendo
     /*Pero los que esten agotandose(el cantidadStock es para comparar le numero de unidades que tienes con el numero
     que le pasas, y el estado es para saber si actualmente se estan vendiendo*/
-    Optional<List<Producto> > findByCantidadEstockLessThanAndEstado(int cantidadStock, boolean estado);
+    Optional<List<Producto> > findByCantidadStockLessThanAndEstado(int cantidadStock, boolean estado);
 }

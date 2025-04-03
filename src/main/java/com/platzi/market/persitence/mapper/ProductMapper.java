@@ -27,10 +27,6 @@ public interface ProductMapper {
             @Mapping(source = "estado", target = "active"),
             @Mapping(source = "categoria", target = "category")
 
-
-
-
-
     })
     Product toProduct(Producto producto);   //Conversion de producto a product
     List<Product> toProducts(List<Producto> productos); //conversion de una lista de productos a una lista de products
