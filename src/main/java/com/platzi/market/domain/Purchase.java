@@ -6,11 +6,11 @@ import java.util.List;
 public class Purchase {
     private int purchaseId;
     private int clientId;
-    private LocalDateTime dete;
+    private LocalDateTime date;
     private String paymentMethod;
     private String comment;
     private String state;
-    private List<PurchaseItem> item;
+    private List<PurchaseItem> items;
 
 
     public int getPurchaseId() {
@@ -29,12 +29,12 @@ public class Purchase {
         this.clientId = clientId;
     }
 
-    public LocalDateTime getDete() {
-        return dete;
+    public LocalDateTime getDate() {
+        return date;
     }
 
-    public void setDete(LocalDateTime dete) {
-        this.dete = dete;
+    public void setDate(LocalDateTime date) {
+        this.date = date;
     }
 
     public String getPaymentMethod() {
@@ -61,11 +61,11 @@ public class Purchase {
         this.state = state;
     }
 
-    public List<PurchaseItem> getItem() {
-        return item;
+    public List<PurchaseItem> getItems() {
+        return items;
     }
 
-    public void setItem(List<PurchaseItem> item) {
-        this.item = item;
+    public void setItems(List<PurchaseItem> items) {
+        this.items = items;
     }
 }
