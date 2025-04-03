@@ -1,9 +1,7 @@
 package com.platzi.market.persitence.entity;
 
-import ch.qos.logback.core.net.server.Client;
 import jakarta.persistence.*;
 
-import java.time.DateTimeException;
 import java.time.LocalDateTime;
 import java.util.List;
 
